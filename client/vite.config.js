@@ -5,6 +5,7 @@ import dotnet from 'dotenv'
 dotnet.config()
 // https://vitejs.dev/config/
 let origin=process.env.SERVER_URL||"http://localhost:5000/"
+console.log(origin)
 export default defineConfig({
   server: {
     proxy: {
