@@ -91,7 +91,7 @@ const VisionView = () => {
           const getSaved = async () => {
             let res = null;
             try {
-              res = await instance.get("/api/dashboard/vision" ,{
+              res = await instance.get("https://dentaladvisor-1.onrender.com/api/dashboard/vision" ,{
               params: {
                 id: id,
               },

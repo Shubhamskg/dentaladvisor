@@ -26,7 +26,7 @@ const Menu = ({ changeColorMode }) => {
     if (window.confirm("Do you want log out")) {
       let res = null
       try {
-        res = await instance.get('/api/user/logout')
+        res = await instance.get('https://dentaladvisor-1.onrender.com/api/user/logout')
       } catch (err) {
         alert(err)
       } finally {
@@ -42,7 +42,7 @@ const Menu = ({ changeColorMode }) => {
     let res=null
     try {
       if (chatId) {
-        res = await instance.delete(`/api/chat/${chatId}`);
+        res = await instance.delete(`https://dentaladvisor-1.onrender.com/api/chat/${chatId}`);
       } 
     } catch (err) {
     } finally {
@@ -57,7 +57,7 @@ const Menu = ({ changeColorMode }) => {
       let res = null
 
       try {
-        res = instance.delete('/api/chat/all')
+        res = instance.delete('https://dentaladvisor-1.onrender.com/api/chat/all')
       } catch (err) {
         alert("Error")
       } finally {
@@ -107,7 +107,7 @@ const Menu = ({ changeColorMode }) => {
     const getHistory = async () => {
       let res = null
       try {
-        res = await instance.get('/api/chat/history')
+        res = await instance.get('https://dentaladvisor-1.onrender.com/api/chat/history')
       } catch (err) {
       } finally {
         if (res?.data) {

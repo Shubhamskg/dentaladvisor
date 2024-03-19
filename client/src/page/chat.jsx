@@ -93,7 +93,7 @@ const Main = () => {
           const getSaved = async () => {
             let res = null;
             try {
-              res = await instance.get("/api/chat/saved", {
+              res = await instance.get("https://dentaladvisor-1.onrender.com/api/chat/saved", {
                 params: {
                   chatId: id,
                 },
@@ -220,7 +220,7 @@ const InputArea = ({ status, chatRef, stateAction,option }) => {
       let res = null;
       try {
         if (_id) {
-          res = await instance.put("/api/chat", {
+          res = await instance.put("https://dentaladvisor-1.onrender.com/api/chat", {
             chatId: _id,
             prompt,
             option,
@@ -228,7 +228,7 @@ const InputArea = ({ status, chatRef, stateAction,option }) => {
             
           });
         } else {
-          res = await instance.post("/api/chat", {
+          res = await instance.post("https://dentaladvisor-1.onrender.com/api/chat", {
             prompt,
             option,
             type

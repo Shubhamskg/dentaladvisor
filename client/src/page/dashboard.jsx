@@ -90,7 +90,7 @@ const Dashboard = () => {
           const getSaved = async () => {
             let res = null;
             try {
-              res = await instance.get("/api/dashboard");
+              res = await instance.get("https://dentaladvisor-1.onrender.com/api/dashboard");
             } catch (err) {
               if (err?.response?.data?.status === 404) {
                 navigate("/404");

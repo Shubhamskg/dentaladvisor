@@ -46,7 +46,7 @@ const SignupComponent = () => {
     if (formData?.pass.length >= 8) {
       let res = null
       try {
-        res = await instance.post('/api/user/signup', formData)
+        res = await instance.post('https://dentaladvisor-1.onrender.com/api/user/signup', formData)
       } catch (err) {
         if (err?.response?.data.message?.exists) {
           stateAction({ type: 'error', status: true })

@@ -33,7 +33,7 @@ const Signup = () => {
         const checkPending = async () => {
           let res = null;
           try {
-            res = await instance.get("/api/user/checkPending", {
+            res = await instance.get("https://dentaladvisor-1.onrender.com/api/user/checkPending", {
               params: {
                 _id: id,
               },

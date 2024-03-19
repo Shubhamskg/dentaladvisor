@@ -91,7 +91,7 @@ const ChatView = () => {
           const getSaved = async () => {
             let res = null;
             try {
-              res = await instance.get("/api/dashboard/chat" ,{
+              res = await instance.get("https://dentaladvisor-1.onrender.com/api/dashboard/chat" ,{
               params: {
                 id: id,
               },
