@@ -24,6 +24,7 @@ let origin=process.env.CLIENT_URL||"http://localhost:5173/"
 console.log(origin)
 app.use(cors({  origin: origin,
 methods: ['GET','HEAD','PATCH', 'POST', 'PUT', 'DELETE'],
+allowedHeaders: ['Content-Type', 'Authorization'], 
 credentials: true}))
 // app.use(cors())
 app.use(cookieParser())
