@@ -252,7 +252,7 @@ router.get('/login', CheckLogged, async (req, res) => {
                 })
 
                 res.status(200)
-                    .cookie("userToken", token, {domain:'dentaladvisor.ai', sameSite: 'None', httpOnly: true, expires: new Date(Date.now() + 5184000) })
+                    .cookie("userToken", token, {domain:'dentaladvisor.ai', secure: true, httpOnly: true, expires: new Date(Date.now() + 5184000) })
                     .json({
                         status: 200,
                         message: 'Success',
