@@ -12,6 +12,7 @@ export default defineConfig({
       '/api': {
         target: 'https://dentaladvisor-1.onrender.com',
         changeOrigin: true,
+        secure: false,
       }
     },
   },
