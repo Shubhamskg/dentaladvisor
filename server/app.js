@@ -22,7 +22,7 @@ app.use(status())
 
 let origin=process.env.CLIENT_URL||"http://localhost:5173/"
 console.log(origin)
-app.use(cors({  origin: origin,
+app.use(cors({  origin: 'https://dentaladvisor.vercel.app',
 methods: ['GET','HEAD','PATCH', 'POST', 'PUT', 'DELETE'],
 credentials: true}))
 // app.use(cors())
