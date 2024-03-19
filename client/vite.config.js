@@ -7,15 +7,15 @@ dotnet.config()
 let origin=process.env.SERVER_URL||"http://localhost:5000/"
 console.log(origin)
 export default defineConfig({
-  server: {
-    proxy: {
-      '/api': {
-        target: 'https://dentaladvisor-1.onrender.com',
-        changeOrigin: true,
-        secure: false,
-      }
-    },
-  },
+  // server: {
+  //   proxy: {
+  //     '/api': {
+  //       target: 'https://dentaladvisor-1.onrender.com',
+  //       changeOrigin: true,
+  //       secure: false,
+  //     }
+  //   },
+  // },
   plugins: [
     react(),
     VitePWA({
