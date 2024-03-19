@@ -9,7 +9,7 @@ let router = Router()
 
 const CheckLogged = async (req, res, next) => {
     const token = req.cookies.userToken
-
+    console.log(token)
     jwt.verify(token, process.env.JWT_PRIVATE_KEY, async (err, decoded) => {
         if (decoded) {
             let userData = null
@@ -248,11 +248,11 @@ router.get('/login', CheckLogged, async (req, res) => {
                     _id: response._id,
                     email: response.email
                 }, process.env.JWT_PRIVATE_KEY, {
-                    expiresIn: '24h'
+                    expiresIn: '1440h'
                 })
 
                 res.status(200)
-                    .cookie("userToken", token, { httpOnly: true, expires: new Date(Date.now() + 86400000) })
+                    .cookie("userToken", token, {domain:'dentaladvisor.ai', sameSite: 'None', httpOnly: true, expires: new Date(Date.now() + 5184000) })
                     .json({
                         status: 200,
                         message: 'Success',
