@@ -21,6 +21,7 @@ app.use(status())
 // app.use(express.static('dist'))
 
 let origin=process.env.CLIENT_URL||"http://localhost:5173/"
+console.log(origin)
 app.use(cors({  origin: origin,
 methods: ['GET','HEAD','PATCH', 'POST', 'PUT', 'DELETE'],
 credentials: true}))
