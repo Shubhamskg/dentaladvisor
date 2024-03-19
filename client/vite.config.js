@@ -9,7 +9,10 @@ console.log(origin)
 export default defineConfig({
   server: {
     proxy: {
-      '/api': 'https://dentaladvisor-1.onrender.com'
+      '/api': {
+        target: 'https://dentaladvisor-1.onrender.com',
+        changeOrigin: true,
+      }
     },
   },
   plugins: [
