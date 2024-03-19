@@ -34,7 +34,7 @@ const Forgot = () => {
           let res = null;
 
           try {
-            res = await instance.get("https://dentaladvisor-1.onrender.com/api/user/forgot-check", {
+            res = await instance.get("/api/user/forgot-check", {
               params: {
                 userId,
                 secret,
@@ -73,13 +73,13 @@ const Forgot = () => {
 
         <div className="bottum">
           <div className="start">
-            <a href="" target="_blank">
+            <a href="https://openai.com/policies/terms-of-use" target="_blank">
               Terms of use
             </a>
           </div>
           <div className="end">
             <a
-              href=""
+              href="https://openai.com/policies/privacy-policy"
               target="_blank"
             >
               Privacy Policy

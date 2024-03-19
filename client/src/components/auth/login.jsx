@@ -61,7 +61,7 @@ const LoginComponent = () => {
         e?.preventDefault()
         let res = null
         try {
-            res = await instance.get('https://dentaladvisor-1.onrender.com/api/user/login', {
+            res = await instance.get('/api/user/login', {
                 params: googleData || formData
             })
         } catch (err) {

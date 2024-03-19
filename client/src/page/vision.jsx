@@ -83,7 +83,7 @@ const Main = () => {
           const getSaved = async () => {
             let res = null;
             try {
-              res = await instance.get("https://dentaladvisor-1.onrender.com/api/vision/saved", {
+              res = await instance.get("/api/vision/saved", {
                 params: {
                   visionId: id,
                 },
@@ -180,7 +180,7 @@ const InputArea = ({ status, chatRef, stateAction }) => {
     formData.append("myImage", image);
     axios({
       method: "post",
-      url: "https://dentaladvisor-1.onrender.com/api/upload-image",
+      url: "/api/upload-image",
       data: formData,
     })
      .then((response) => {
@@ -231,14 +231,14 @@ const InputArea = ({ status, chatRef, stateAction }) => {
 
       try {
         if (_id) {
-          res = await instance.put("https://dentaladvisor-1.onrender.com/api/vision", {
+          res = await instance.put("/api/vision", {
             visionId: _id,
             option,
             prompt,
             image
           });
         } else {
-          res = await instance.post("https://dentaladvisor-1.onrender.com/api/vision", {
+          res = await instance.post("/api/vision", {
             option,
             prompt,
             image

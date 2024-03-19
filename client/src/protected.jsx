@@ -19,7 +19,7 @@ const ProtectedRoute = ({ offline, authed }) => {
       let res = null;
 
       try {
-        res = await instance.get("https://dentaladvisor-1.onrender.com/api/user/checkLogged");
+        res = await instance.get("/api/user/checkLogged");
         if (res?.data?.data) {
           dispatch(insertUser(res?.data?.data));
         }

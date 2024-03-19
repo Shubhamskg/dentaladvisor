@@ -44,7 +44,7 @@ const ForgotComponent = ({ isRequest, userId, secret }) => {
         if (e) { e.preventDefault() }
         let res = null
         try {
-            res = await instance.post('https://dentaladvisor-1.onrender.com/api/user/forgot-request', {
+            res = await instance.post('/api/user/forgot-request', {
                 email: formData.email
             })
         } catch (err) {
@@ -68,7 +68,7 @@ const ForgotComponent = ({ isRequest, userId, secret }) => {
 
                 let res = null
                 try {
-                    res = await instance.put('https://dentaladvisor-1.onrender.com/api/user/forgot-finish', {
+                    res = await instance.put('/api/user/forgot-finish', {
                         userId,
                         secret,
                         newPass: formData.newPass,
